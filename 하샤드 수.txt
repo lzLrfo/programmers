@@ -1,0 +1,15 @@
+class Solution {
+    public boolean solution(int x) {
+        boolean answer = true;
+        char[] digits = String.valueOf(x).toCharArray();
+        int digit = 0;
+        for(int i = 0; i < digits.length; i++) {
+            digit += Integer.parseInt(String.valueOf(digits[i]));
+        }
+        if(x % digit == 0)
+            answer = true;
+        else
+            answer = false;
+        return answer;
+    }
+}
