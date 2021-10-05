@@ -1,0 +1,10 @@
+class Solution {
+    public long solution(long n) {
+        long answer = -1;
+        double sqr = Math.sqrt(n);
+        int check = (int)sqr;
+        if(sqr == check)
+            answer = (long)((sqr + 1) * (sqr + 1));
+        return answer;
+    }
+}
