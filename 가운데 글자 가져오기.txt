@@ -1,0 +1,12 @@
+class Solution {
+    public String solution(String s) {
+        String answer = "";
+        int len = s.length();
+        int midindex = len / 2;
+        if(len % 2 == 1)
+            answer += s.substring(midindex,midindex+1);
+        else
+            answer += s.substring(midindex-1,midindex+1);
+        return answer;
+    }
+}
