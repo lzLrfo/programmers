@@ -1,0 +1,10 @@
+class Solution {
+    public long solution(long price, long money, long count) {
+        long answer = -1;
+        long totalprice = (count * (price + (price * count))) / 2;
+        answer = totalprice - money;
+        if(answer <= 0)
+            answer = 0;
+        return answer;
+    }
+}
