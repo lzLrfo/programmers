@@ -1,0 +1,26 @@
+class Solution {
+    public String solution(String s, int n) {
+        String answer = "";
+        char[] alphabet = s.toCharArray();
+        for(int i = 0; i < alphabet.length; i++) {
+            if(alphabet[i] != ' ') {
+                if((alphabet[i] >= 65) && (alphabet[i] <= 90)) {
+                    if(alphabet[i]+n > 90)
+                        alphabet[i] += n - 26;
+                    else
+                        alphabet[i] += n;
+                }
+                else if((alphabet[i] >= 97) && (alphabet[i] <= 122)) {
+                    if(alphabet[i]+n > 122)
+                        alphabet[i] += n - 26;
+                    else
+                        alphabet[i] += n;
+                }
+                answer += Character.toString(alphabet[i]);
+            }
+            else
+                answer += " ";
+        }
+        return answer;
+    }
+}
